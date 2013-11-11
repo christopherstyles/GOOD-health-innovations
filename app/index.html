@@ -6,12 +6,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>grunt test 4</title>
+    <title>GOOD - 11 controversial health innovations that people are still talking about today</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <!-- <meta name="viewport" content="width=device-width"> -->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css({app,.tmp}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/vex/css/vex.css">
+    <link rel="stylesheet" href="bower_components/vex/css/vex-theme-plain.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -19,96 +21,108 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <article>
-      <header>
-        <div class="logo">
-          <a href="http://www.good.is/" target="_blank">GOOD</a>
-        </div>
+    <header role="banner">
+      <div class="logo">
+        <a href="http://www.good.is/" target="_blank">GOOD</a>
+      </div>
 
-        <h1>
-          GOOD - 11 Controversial Health Innovations
-          <em>that people are still talking about today</em>
-        </h1>
-      </header>
+      <h1 class="title">
+        11 Controversial Health Innovations
+        <em>that people are still talking about today</em>
+      </h1>
+    </header>
 
-      <section>
+    <main role="main" class="main">
+      <section class="panels">
         <ul>
-          <li>
+          <li class="panel panel-pasteurization">
             <a href="#">
-              1. pasteurization
+              <!-- Pasteurization -->
+              <img src="/images/panels-source/pasteurization.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-reproductive-health">
             <a href="#">
-              2. Reproductive Health
+              <!-- Reproductive Health -->
+              <img src="/images/panels-source/reproductive-health.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-vaccinations">
             <a href="#">
-              3. Vaccinations
+              <!-- Vaccinations -->
+              <img src="/images/panels-source/vaccinations.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-stem-cell-research">
             <a href="#">
-              4. Stem Cell Research
+              <!-- Stem Cell Research -->
+              <img src="/images/panels-source/stem-cell-research.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-toilets">
             <a href="#">
-              5. Toilets
+              <!-- Toilets -->
+              <img src="/images/panels-source/toilets.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-hiv-aids">
             <a href="#">
-              6. HIV/AIDS
+              <!-- HIV/AIDS -->
+              <img src="/images/panels-source/hiv-aids.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-public-healthcare">
             <a href="#">
-              7. Public Healthcare
+              <!-- Public Healthcare -->
+              <img src="/images/panels-source/public-healthcare.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-antibiotics">
             <a href="#">
-              8. Antibiotics
+              <!-- Antibiotics -->
+              <img src="/images/panels-source/antibiotics.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-quarantines">
             <a href="#">
-              9. Quarantine + International Travel
+              <!-- Quarantine + International Travel -->
+              <img src="/images/panels-source/quarantines.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-epa">
             <a href="#">
-              10. EPA
+              <!-- EPA -->
+              <img src="/images/panels-source/epa.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-malaria">
             <a href="#">
-              11. Malaria
+              <!-- Malaria -->
+              <img src="/images/panels-source/malaria.svg">
             </a>
           </li>
-          <li>
+          <li class="panel panel-where-do-you-stand">
             <a href="#">
-              12. Closing
+              <!-- Closing -->
+              <img src="/images/panels-source/where-do-you-stand.svg">
             </a>
           </li>
         </ul>
       </section>
-    </article>
+    </main>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/vex/js/vex.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/plugins.js -->
-
     <!-- endbuild -->
 </body>
 </html>
