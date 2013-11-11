@@ -1,0 +1,23 @@
+@import 'globals/mixins';
+@import 'compass/utilities/text/replacement';
+
+h1.title {
+  @include hide-text;
+  background: image_url('title.png') no-repeat 0px 0px;
+  background: rgba(0,0,0,0) image_url('title.svg') no-repeat 0px 0px;
+  background-size: 767px 153px;
+  width: 767px;
+  height: 153px;
+  margin-left: 74px;
+}
+
+.logo {
+  display: block;
+  text-indent: -999em;
+  background: image_url('GOOD-logo.png') no-repeat 0px 0px;
+  background: rgba(0,0,0,0) image_url('GOOD-logo.svg') no-repeat 0px 0px;
+  background-size: 187px 106px;
+  width: 187px;
+  height: 106px;
+  margin-left: 52px;
+}
