@@ -1,3 +1,12 @@
+# Bower packages
+#= require jquery
+#= require vex/js/vex
+#
+# Unregistered components
+#
+# App
+#
+
 vex.defaultOptions.className = 'vex-theme-plain'
 
 $('.panel a').on 'click', (e) ->

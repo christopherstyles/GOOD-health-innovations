@@ -5,24 +5,16 @@ An interactive panel of controversial health innovations that people are still t
 
 Installation
 ---
-For node dependencies, from the app directory, run:
-
-  npm install
-    
 For javascript dependencies, use [Bower](http://bower.io/). From the app directory, run:
 
-  bower install
-  grunt bower-install # Injects bower components into the html template
+	bower install
+	grunt bower-install # Injects bower components into the html template
     
 Serve it.
 ---
-  grunt serve
-    
-Test it.
----
-  grunt test
+	bundle exec middleman server
     
 Build it.
 ---
-  grunt build
+	bundle exec middleman build
     
