@@ -17,20 +17,26 @@ module.exports = (grunt) ->
     watch:
       compass:
         files: ["<%= app.src %>/styles/{,*/}*.{scss,sass}"]
-        tasks: ["compass:server", "autoprefixer"]
+        tasks: [
+          "compass:server"
+          "autoprefixer"
+        ]
 
       styles:
         files: ["<%= app.src %>/styles/{,*/}*.css"]
-        tasks: ["copy:styles", "autoprefixer"]
+        tasks: [
+          "copy:styles"
+          "autoprefixer"
+        ]
 
       livereload:
         options:
           livereload: "<%= connect.options.livereload %>"
 
         files: [
-          "<%= app.src %>/*.html",
-          ".tmp/styles/{,*/}*.css",
-          "{.tmp,<%= app.src %>}/scripts/{,*/}*.js",
+          "<%= app.src %>/*.html"
+          ".tmp/styles/{,*/}*.css"
+          "{.tmp,<%= app.src %>}/scripts/{,*/}*.js"
           "<%= app.src %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}"
         ]
 
@@ -109,7 +115,12 @@ module.exports = (grunt) ->
         jshintrc: ".jshintrc"
         reporter: require("jshint-stylish")
 
-      all: ["Gruntfile.js", "<%= app.src %>/scripts/{,*/}*.js", "!<%= app.src %>/scripts/vendor/*", "test/spec/{,*/}*.js"]
+      all: [
+        "Gruntfile.js"
+        "<%= app.src %>/scripts/{,*/}*.js"
+        "!<%= app.src %>/scripts/vendor/*"
+        "test/spec/{,*/}*.js"
+      ]
 
     # +concat+ and +uglify+ are not enabled since usemin task does this
 
@@ -190,8 +201,8 @@ module.exports = (grunt) ->
         files: [
           dot: true
           src: [
-            ".tmp",
-            "<%= app.dist %>/*",
+            ".tmp"
+            "<%= app.dist %>/*"
             "!<%= app.dist %>/.git*"
           ]
         ]
@@ -206,9 +217,9 @@ module.exports = (grunt) ->
           cwd: "<%= app.src %>"
           dest: "<%= app.dist %>"
           src: [
-            "*.{ico,png,txt}",
-            ".htaccess",
-            "images/{,*/}*.{webp,gif}",
+            "*.{ico,png,txt}"
+            ".htaccess"
+            "images/{,*/}*.{webp,gif}"
             "styles/fonts/{,*/}*.*"
           ]
         ]
@@ -218,12 +229,15 @@ module.exports = (grunt) ->
         dot: true
         cwd: "<%= app.src %>/styles"
         dest: ".tmp/styles/"
-        src: "{,*/}*.css"
+        src: [
+          "{,*/}*.css"
+          "<%= app.src %>/bower_components/{,*/}*.css"
+        ]
 
     concurrent:
       server: [
-        "coffee:dist",
-        "compass",
+        "coffee:dist"
+        "compass"
         "copy:styles"
       ]
       test: ["copy:styles"]
@@ -240,46 +254,47 @@ module.exports = (grunt) ->
       dist:
         files:
           src: [
-            "<%= app.dist %>/scripts/{,*/}*.js",
-            "<%= app.dist %>/styles/{,*/}*.css",
-            "<%= app.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}",
+            "<%= app.dist %>/scripts/{,*/}*.js"
+            "<%= app.dist %>/styles/{,*/}*.css"
+            "<%= app.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}"
             "<%= app.dist %>/styles/fonts/{,*/}*.*"
           ]
 
   grunt.registerTask "serve", (target) ->
     return grunt.task.run(["build", "connect:dist:keepalive"])  if target is "dist"
+
     grunt.task.run [
-      "clean:server",
-      "concurrent:server",
-      "autoprefixer",
-      "connect:livereload",
+      "clean:server"
+      "concurrent:server"
+      "autoprefixer"
+      "connect:livereload"
       "watch"
     ]
 
   grunt.registerTask "test", [
-    "clean:server",
-    "concurrent:test",
-    "autoprefixer",
-    "connect:test",
+    "clean:server"
+    "concurrent:test"
+    "autoprefixer"
+    "connect:test"
     "mocha"
   ]
 
   grunt.registerTask "build", [
-    "clean:dist",
-    "useminPrepare",
-    "concurrent:dist",
-    "autoprefixer",
-    "concat",
-    "cssmin",
-    "uglify",
-    "copy:dist",
-    "rev",
+    "clean:dist"
+    "useminPrepare"
+    "concurrent:dist"
+    "autoprefixer"
+    "concat"
+    "cssmin"
+    "uglify"
+    "copy:dist"
+    "rev"
     "usemin"
   ]
 
   grunt.registerTask "default", [
-    "jshint",
-    "test",
+    "jshint"
+    "test"
     "build"
   ]
 
