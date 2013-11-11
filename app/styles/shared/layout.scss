@@ -1,9 +1,11 @@
-.logo {
-  display: block;
-  width: 187px;
-  height: 106px;
-  text-indent: -999em;
-  background: url(/images/GOOD-logo.svg);
-  background-size: 187px 106px;
+@import 'compass/utilities/general/min';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  @include min-width(1000px);
 }
 
