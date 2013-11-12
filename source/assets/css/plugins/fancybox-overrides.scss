@@ -1,0 +1,21 @@
+.fancybox-nav {
+  &.fancybox-next,
+  &.fancybox-prev {
+    width: 51px;
+    height: 51px;
+    background: image-url('sprites/arrows.png') no-repeat 0px 0px;
+    background: rgba(0,0,0,0) image-url('sprites/arrows.svg') no-repeat 0px 0px;
+    top: 50%;
+    margin-top: -24px;
+  }
+
+  &.fancybox-next {
+    background-position: 0 -51px;
+    right: -72px;
+  }
+
+  &.fancybox-prev {
+    background-position: 0 0;
+    left: -72px;
+  }
+}
