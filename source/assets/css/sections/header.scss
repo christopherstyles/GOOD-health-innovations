@@ -1,5 +1,5 @@
 @import 'globals/mixins';
-@import 'compass/utilities/text/replacement';
+@import 'compass/typography/text/replacement';
 
 h1.title {
   @include hide-text;
