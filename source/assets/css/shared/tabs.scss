@@ -1,0 +1,68 @@
+@import 'compass/typography/text/replacement';
+
+/*
+A grouping of inline tabs.
+
+No Styleguide reference.
+*/
+.tabs {
+  .tab {
+    float: left;
+
+    a {
+      @include hide-text;
+      background: image-url('sprites/tabs.png') no-repeat 0px 0px;
+      background: rgba(0,0,0,0) image-url('sprites/tabs.svg') no-repeat 0px 0px;
+      display: inline-block;
+      width: 39px;
+      height: 55px;
+      margin-right: 24px;
+      margin-bottom: -5px;
+    }
+
+    &.tab-one {
+      a {
+        background-position: 0 0;
+
+        &:hover,
+        &.active {
+          background-position: 0 -55px;
+        }
+      }
+    }
+
+    &.tab-two {
+      a {
+        background-position: 0 -220px;
+
+        &:hover,
+        &.active {
+          background-position: 0 -275px;
+        }
+      }
+    }
+
+    &.tab-three {
+      a {
+        background-position: 0 -110px;
+
+        &:hover,
+        &.active {
+          background-position: 0 -165px;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    display: block;
+    clear: both;
+    background-color: #3fa6df;
+    color: #fff;
+    padding: 15px 18px;
+
+    &:not(.active) {
+      display: none;
+    }
+  }
+}
