@@ -1,0 +1,11 @@
+@import "compass/css3/font-face";
+
+@font-face {
+  font-family: 'Trade-Gothic-Bold-Condensed-20';
+  src: font-url('trade-gothic/tradegothicltstd-bdcn20-webfont.eot' + "?#iefix") format('embedded-opentype'),
+       font-url('trade-gothic/tradegothicltstd-bdcn20-webfont.woff') format('woff'),
+       font-url('trade-gothic/tradegothicltstd-bdcn20-webfont.ttf')  format('truetype'),
+       font-url('trade-gothic/tradegothicltstd-bdcn20-webfont.svg' + "#tradegothic_bdcn20") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
