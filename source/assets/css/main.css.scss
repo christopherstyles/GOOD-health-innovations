@@ -1,7 +1,7 @@
 // Plugins
-//= require vex/sass/vex
-//= require vex/sass/vex-theme-plain
 //= require normalize-scss/normalize
+//= require fancybox/source/jquery.fancybox
+//= require plugins/fancybox-overrides
 //
 // App
 //= require_tree ./shared
