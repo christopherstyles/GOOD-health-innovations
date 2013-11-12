@@ -54,6 +54,7 @@ Slim::Engine.set_default_options pretty: true
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
 
 # Add bower's directory to sprockets asset path
 after_configuration do
