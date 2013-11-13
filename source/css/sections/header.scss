@@ -1,0 +1,21 @@
+@import 'globals/mixins';
+@import 'compass/typography/text/replacement';
+
+h1.title {
+  @include hide-text;
+  @include at2x('title', 766px, 152px);
+  width: 767px;
+  height: 153px;
+  margin-left: 74px;
+}
+
+.logo {
+  display: block;
+  text-indent: -999em;
+  background: image-url('GOOD-logo@2x.png') no-repeat 0px 0px;
+  background: rgba(0,0,0,0) image-url('GOOD-logo.svg') no-repeat 0px 0px;
+  background-size: 187px 106px;
+  width: 187px;
+  height: 106px;
+  margin-left: 52px;
+}

@@ -1,0 +1,63 @@
+/*
+Display as an equal height inline item, suitable for list items, etc
+see: http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/
+see: http://www.boogdesign.com/examples/floats.html
+
+Compatibility untested.
+*/
+@mixin inline-stack {
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/*
+A helper mixin for applying high-resolution background images
+
+$path - path to the retina image.
+$w    - width of the retina image, defaults to auto.
+$h    - height of the retina image, defaults to auto.
+
+Compatibility untested.
+*/
+@mixin at2x($image_name, $w: auto, $h: auto, $extension: '.png') {
+  background-image: image-url($image_name + $extension);
+  $x2img: $image_name + '@2x' + $extension;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: image-url($x2img);
+    background-size: $w $h;
+  }
+}
+
+/*
+Expand an image to the maximum dimensions of its container element
+
+Compatibility untested
+*/
+@mixin adaptive-image {
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+
+/*
+WebKit font-smoothing
+
+References:
+
+1. http://maxvoltar.com/sandbox/fontsmoothing/
+2. http://maxvoltar.com/archive/-webkit-font-smoothing
+
+source: https://gist.github.com/adamstac/5048881
+
+Values: none, antialiased (default), subpixel-antialiased
+
+Currently compatibile only in webkit browsers
+*/
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value;
+}

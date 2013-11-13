@@ -21,8 +21,8 @@ namespace :handlebars do
   #
   desc 'Precompile Handlebar templates'
   task :precompile do
-    input_dir = 'source/assets/js/templates'
-    output_dir = 'source/assets/js/templates'
+    input_dir = 'source/js/templates'
+    output_dir = 'source/js/templates'
     templates = %w(panel panel_popup)
 
     # Progress Bar

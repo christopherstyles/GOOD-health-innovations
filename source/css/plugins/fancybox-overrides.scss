@@ -1,0 +1,61 @@
+.fancybox-nav {
+  &.fancybox-next,
+  &.fancybox-prev {
+    width: 51px;
+    height: 51px;
+    background: image-url('sprites/arrows.png') no-repeat 0px 0px;
+    background: rgba(0,0,0,0) image-url('sprites/arrows.svg') no-repeat 0px 0px;
+    top: 50%;
+    margin-top: -24px;
+
+    span {
+      background: none;
+    }
+  }
+
+  &.fancybox-next {
+    background-position: 0 -51px;
+    right: -72px;
+  }
+
+  &.fancybox-prev {
+    background-position: 0 0;
+    left: -72px;
+  }
+}
+
+.fancybox-skin {
+  background: #fff;
+}
+
+// Re-url the images, as they can't be found when css is minified
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span {
+  background-image: image-url('plugins/fancybox_sprite.png');
+}
+
+.fancybox-close {
+  background: image-url('btn/close.svg') no-repeat 0px 0px;
+  background: rgba(0,0,0,0) image-url('btn/close.svg') no-repeat 0px 0px;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  top: -43px;
+  right: -43px;
+}
+
+#fancybox-loading div {
+  background: image-url('plugins/fancybox_loading.gif') center center no-repeat;
+}
+
+
+.fancybox-nav {
+  background: transparent image-url('plugins/blank.gif'); /* helps IE */
+}
+
+
+.fancybox-overlay {
+  background: image-url('plugins/fancybox_overlay.png');
+}
