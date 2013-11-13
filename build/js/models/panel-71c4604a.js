@@ -1,0 +1,1 @@
+!function(){this.Panel=function(){function t(t){this.data=t}return t.prototype.get=function(){var t,n;return n=Handlebars.templates.panel,t=n(this.data)},t}()}.call(this);

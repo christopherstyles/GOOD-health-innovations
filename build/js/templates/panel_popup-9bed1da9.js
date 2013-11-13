@@ -1,0 +1,1 @@
+!function(){var e=Handlebars.template,a=Handlebars.templates=Handlebars.templates||{};a.panel_popup=e(function(e,a,t,n,r){this.compilerInfo=[4,">= 1.0.0"],t=this.merge(t,e.helpers),r=r||{};var l="";return l})}();

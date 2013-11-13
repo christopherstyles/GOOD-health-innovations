@@ -1,0 +1,1 @@
+!function(){var t;t=function(){function t(){$(document).on("click",".tab",function(t){return n(t)})}var n;return n=function(t){var n,a;return t.preventDefault(),n=$(t.target),a=n.attr("href"),$(a).addClass("active").siblings(".tab-content").removeClass("active"),$(".tab a").removeClass("active"),console.log(n),n.addClass("active")},t}(),$(function(){return new t})}.call(this);

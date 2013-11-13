@@ -1,0 +1,14 @@
+{
+  "panels": [
+    {
+      "title": "Pasteurization",
+      "slug": "pasteurization",
+      "thumbnail": "/images/panels-source/pasteurization.svg"
+    },
+    {
+      "title": "Reproductive Health",
+      "slug": "reproductive-health",
+      "thumbnail": "/images/panels-source/reproductive-health.svg"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+!function(){this.PanelData=function(){function t(){}return t.prototype.url="/data/panels.json",t.prototype.get=function(){return $.getJSON(this.url).then(function(t){return $(window).trigger({type:"PanelData:success",panels:t.panels})})},t}()}.call(this);
