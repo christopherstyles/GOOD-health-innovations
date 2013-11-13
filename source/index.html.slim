@@ -10,64 +10,76 @@ header role="banner"
     ul
       li.panel.panel-pasteurization
         a href="#pasteurization"
+          .title Pasteurization
           /! Pasteurization
-          = image_tag "panels-source/pasteurization.svg"
+          = image_tag "panels-source/pasteurization.png", srcset: 'images/panels-source/pasteurization@2x.png 2x'
       li.panel.panel-reproductive-health
         a href="#reproductive-health"
+          .title Reproductive Health
           /! Reproductive Health
-          = image_tag "panels-source/reproductive-health.svg"
+          = image_tag "panels-source/reproductive-health.png", srcset: 'images/panels-source/reproductive-health@2x.png 2x'
       li.panel.panel-vaccinations
         a href="#vaccinations"
+          .title Vaccinations
           /! Vaccinations
-          = image_tag "panels-source/vaccinations.svg"
+          = image_tag "panels-source/vaccinations.png", srcset: 'images/panels-source/vaccinations@2x.png 2x'
       li.panel.panel-stem-cell-research
         a href="#stem-cell-research"
+          .title Stem Cell Research
           /! Stem Cell Research
-          = image_tag "panels-source/stem-cell-research.svg"
+          = image_tag "panels-source/stem-cell-research.png", srcset: 'images/panels-source/stem-cell-research@2x.png 2x'
       li.panel.panel-toilets
         a href="#toilets"
+          .title Toilets
           /! Toilets
-          = image_tag "panels-source/toilets.svg"
+          = image_tag "panels-source/toilets.png", srcset: 'images/panels-source/toilets@2x.png 2x'
       li.panel.panel-hiv-aids
         a href="#hiv-aids"
+          .title HIV/AIDS
           /! HIV/AIDS
-          = image_tag "panels-source/hiv-aids.svg"
+          = image_tag "panels-source/hiv-aids.png", srcset: 'images/panels-source/hiv-aids@2x.png 2x'
       li.panel.panel-public-healthcare
         a href="#public-healthcare"
+          .title Public Healthcare
           /! Public Healthcare
-          = image_tag "panels-source/public-healthcare.svg"
+          = image_tag "panels-source/public-healthcare.png", srcset: 'images/panels-source/public-healthcare@2x.png 2x'
       li.panel.panel-antibiotics
         a href="#antibiotics"
+          .title Antibiotics
           /! Antibiotics
-          = image_tag "panels-source/antibiotics.svg"
+          = image_tag "panels-source/antibiotics.png", srcset: 'images/panels-source/antibiotics@2x.png 2x'
       li.panel.panel-quarantines
         a href="#quarantines"
+          .title Quarantines
           /! Quarantine + International Travel
-          = image_tag "panels-source/quarantines.svg"
+          = image_tag "panels-source/quarantines.png", srcset: 'images/panels-source/quarantines@2x.png 2x'
       li.panel.panel-epa
         a href="#epa"
+          .title EPA
           /! EPA
-          = image_tag "panels-source/epa.svg"
+          = image_tag "panels-source/epa.png", srcset: 'images/panels-source/epa@2x.png 2x'
       li.panel.panel-malaria
         a href="#malaria"
+          .title Malaria
           /! Malaria
-          = image_tag "panels-source/malaria.svg"
+          = image_tag "panels-source/malaria.png", srcset: 'images/panels-source/malaria@2x.png 2x'
       li.panel.panel-where-do-you-stand
         a href="#where-do-you-stand"
           /! Closing
-          = image_tag "panels-source/where-do-you-stand.svg"
+          = image_tag "panels-source/where-do-you-stand.png", srcset: 'images/panels-source/where-do-you-stand@2x.png 2x'
 
-= partial 'popup-content/pasteurization'
-= partial 'popup-content/reproductive-health'
-= partial 'popup-content/vaccinations'
-= partial 'popup-content/stem-cell-research'
-= partial 'popup-content/toilets'
-= partial 'popup-content/hiv-aids'
-= partial 'popup-content/public-healthcare'
-= partial 'popup-content/antibiotics'
-= partial 'popup-content/quarantines'
-= partial 'popup-content/epa'
-= partial 'popup-content/malaria'
-= partial 'popup-content/where-do-you-stand'
+.popup-content
+  = partial 'popup-content/pasteurization'
+  = partial 'popup-content/reproductive-health'
+  = partial 'popup-content/vaccinations'
+  = partial 'popup-content/stem-cell-research'
+  = partial 'popup-content/toilets'
+  = partial 'popup-content/hiv-aids'
+  = partial 'popup-content/public-healthcare'
+  = partial 'popup-content/antibiotics'
+  = partial 'popup-content/quarantines'
+  = partial 'popup-content/epa'
+  = partial 'popup-content/malaria'
+  = partial 'popup-content/where-do-you-stand'
 
 
