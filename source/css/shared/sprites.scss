@@ -1,4 +1,18 @@
 /*
+Folio Numbers
+*/
+
+// Non-retina
+$numbers-layout: vertical;
+$numbers-spacing: 2px;
+$numbers: sprite-map('numbers/*.png');
+
+// Retina
+$numbers-retina-layout: vertical;
+$numbers-retina-spacing: 2px;
+$numbers-retina: sprite-map('numbers-retina/*.png');
+
+/*
 Arrows
 */
 

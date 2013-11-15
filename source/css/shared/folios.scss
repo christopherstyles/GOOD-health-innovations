@@ -1,0 +1,27 @@
+@import 'globals/mixins';
+@import 'shared/sprites';
+
+/*
+Numeric indicators that appear in the topic modal header.
+
+No Styleguide reference.
+*/
+.folio {
+  padding-top: 17px;
+  height: 58px;
+  float: left;
+  border-right: 1px dotted #fff;
+
+  .number {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  $numbers_list: one two three four five six seven eight nine ten eleven;
+
+  @each $number in $numbers_list {
+    .number-#{$number} {
+      @include retina-sprite($numbers, $numbers-retina, $number);
+    }
+  }
+}
