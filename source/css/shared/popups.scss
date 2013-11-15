@@ -1,4 +1,6 @@
+@import 'globals/mixins';
 @import 'shared/utility';
+@import 'compass/utilities/sprites/base';
 
 /*
 A popup window with extra information about a topic.
@@ -6,8 +8,6 @@ A popup window with extra information about a topic.
 No Styleguide reference.
 */
 .popup {
-  position: relative;
-
   h2 {
     font-family: 'Trade-Gothic-Bold-Condensed-20';
     font-size: 31px;
@@ -27,6 +27,7 @@ No Styleguide reference.
     font-size: 24px;
     font-weight: normal;
     margin: 0 0 8px 0;
+    color: #231f20;
   }
 
   p {
@@ -34,6 +35,7 @@ No Styleguide reference.
     font-size: 16px;
     line-height: 27px;
     margin-top: 0;
+    color: #231f20;
   }
 
   header {
@@ -56,23 +58,16 @@ No Styleguide reference.
     width: 100%;
     line-height: 56px;
     color: #fff;
+
+    h2 {
+      @include font-smoothing;
+      text-transform: uppercase;
+    }
   }
 
   .content {
     padding-bottom: 75px;
     display: inline-block;
-  }
-
-  .folio {
-    // font-family: 'BondoniH-Heavy', Georgia;
-    font-family: Georgia;
-    font-size: 68px;
-    line-height: 68px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 6px; // 68 + 6 = 75px to match the h2
-    float: left;
-    border-right: 1px dotted #fff;
   }
 
   .left-column {
@@ -101,6 +96,26 @@ No Styleguide reference.
     p {
       font-size: 20px;
       line-height: 31px;
+    }
+  }
+
+  &.last {
+    h3 {
+      margin-bottom: 2px;
+    }
+
+    header {
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .banner {
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 32px;
     }
   }
 }
