@@ -1,12 +1,10 @@
+@import 'globals/mixins';
+@import 'shared/sprites';
+
 .fancybox-nav {
   &.fancybox-next,
   &.fancybox-prev {
-    width: 51px;
-    height: 51px;
-    background: image-url('sprites/arrows.png') no-repeat 0px 0px;
-    background: rgba(0,0,0,0) image-url('sprites/arrows.svg') no-repeat 0px 0px;
     top: 50%;
-    margin-top: -24px;
 
     span {
       background: none;
@@ -14,13 +12,21 @@
   }
 
   &.fancybox-next {
-    background-position: 0 -51px;
+    @include retina-sprite($arrows, $arrows-retina, arrow-right);
     right: -72px;
+
+    &:hover {
+      @include retina-sprite($arrows, $arrows-retina, arrow-right-active);
+    }
   }
 
   &.fancybox-prev {
-    background-position: 0 0;
+    @include retina-sprite($arrows, $arrows-retina, arrow-left);
     left: -72px;
+
+    &:hover {
+      @include retina-sprite($arrows, $arrows-retina, arrow-left-active);
+    }
   }
 }
 
@@ -57,5 +63,5 @@
 
 
 .fancybox-overlay {
-  background: image-url('plugins/fancybox_overlay.png');
+  background: none;
 }
