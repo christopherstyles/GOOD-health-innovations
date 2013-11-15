@@ -1,0 +1,40 @@
+@import 'globals/mixins';
+
+/*
+Sources for topic content.
+
+No Styleguide reference.
+*/
+.sources {
+  @include font-smoothing;
+  font-family: 'Trade-Gothic-Bold-Condensed-20';
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #231f20;
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+
+  a {
+    color: #231f20;
+    margin-bottom: 3px;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+
+    &:hover {
+      border-bottom: 1px dotted #231f20;
+    }
+  }
+
+  .label {
+    float: left;
+  }
+
+  ul {
+    @include block-formatting-context;
+    list-style-type: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+  }
+}
