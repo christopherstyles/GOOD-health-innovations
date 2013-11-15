@@ -1,11 +1,8 @@
-@import 'compass/utilities/general/min';
-
 body {
   padding: 0;
   margin: 0;
 }
 
 .main {
-  @include min-width(1000px);
+  width: 1000px;
 }
-
