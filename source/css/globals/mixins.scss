@@ -61,3 +61,26 @@ Currently compatibile only in webkit browsers
 @mixin font-smoothing($value: antialiased) {
   -webkit-font-smoothing: $value;
 }
+
+/*
+Use a retina icon sprite.
+
+Compatibility untested.
+*/
+@mixin retina-sprite($map, $map-retina, $sprite) {
+  background-image: sprite-url($map);
+  background-position: sprite-position($map, $sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: image-height(sprite-file($map, $sprite));
+  width: image-width(sprite-file($map, $sprite));
+
+  @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    background-image: sprite-url($map-retina);
+    background-size: (image-width(sprite-path($map-retina)) / 2) (image-height(sprite-path($map-retina)) / 2);
+    background-position: round(nth(sprite-position($map-retina, $sprite), 1) / 2) round(nth(sprite-position($map-retina, $sprite), 2) / 2);
+    height: image-height(sprite-file($map-retina, $sprite)) / 2;
+    width: image-width(sprite-file($map-retina, $sprite)) / 2;
+  }
+}
