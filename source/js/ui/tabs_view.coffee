@@ -1,6 +1,6 @@
-class Tabs
+class TabsView
   constructor: ->
-    $(document).on 'click', '.tab', (e) -> onclick(e)
+    $(document).on 'click', '.tab a', (e) -> onclick(e)
 
   onclick = (e) ->
     e.preventDefault()
@@ -12,9 +12,7 @@ class Tabs
     $(target).addClass('active').siblings('.tab-content').removeClass('active')
 
     # Make this tab active
-    $('.tab a').removeClass('active')
-    console.log el
-    el.addClass('active')
+    el.addClass('active').parents('.tab').siblings().find('a').removeClass('active')
 
 $ ->
-  new Tabs()
+  new TabsView()
