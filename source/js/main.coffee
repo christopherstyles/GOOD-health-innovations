@@ -14,19 +14,3 @@
 #= require_tree ./ui
 # require_tree ./models
 # require_tree ./views
-
-
-# $ ->
-#   new PanelView('.panels ul')
-
-$('.panel a').attr('rel', 'popup-gallery').fancybox
-  arrows: 'yes'
-  height: '645px'
-  width: '750px'
-  padding: 0
-  maxWidth: 750
-  maxHeight: 650
-  scrolling: 'no'
-
-  # wrapCSS: 'popup'
-
