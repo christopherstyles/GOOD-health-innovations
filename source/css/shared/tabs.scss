@@ -58,8 +58,11 @@ No Styleguide reference.
     display: block;
     clear: both;
     background-color: #3fa6df;
-    color: #fff;
     padding: 15px 18px;
+
+    p {
+      color: #fff;
+    }
 
     &:not(.active) {
       display: none;
