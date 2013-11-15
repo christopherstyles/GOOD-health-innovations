@@ -3,6 +3,11 @@
 @import 'compass/css3/opacity';
 @import 'compass/css3/transition';
 
+/*
+A section of illustrated panels.
+
+No Styleguide reference.
+*/
 .panels {
   background-image: image-url('bg/drop-shadow.png');
   background-position: top;
@@ -13,19 +18,51 @@
   padding: 15px 0 0 0;
   text-align: left;
   width: 100%;
+  position: relative;
 
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     clear: both;
-    display: inline; // ie double margin fix
     float: left;
     padding: 0 15px 0 15px;
     position: relative;
   }
+
+  /*
+  A foreground overlay that obscures the illustrated panels. This element
+  is initially hidden.
+
+  .active - Reveals the foreground overlay.
+
+  No Styleguide reference.
+  */
+  .overlay {
+    @include transition-property(opacity);
+    @include transition-duration(0.25s);
+    @include opacity(0);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c9ebfe;
+    z-index: 1;
+
+    &.active {
+      display: block;
+      @include opacity(.6);
+    }
+  }
 }
 
+/*
+An illustrated topic panel.
+
+No Styleguide reference.
+*/
 .panel {
   clear: none;
   display: inline;
@@ -69,7 +106,6 @@
     height: auto;
     text-align: center;
     color: #fff;
-    // padding: 16px 0 16px 0;
     line-height: 52px;
   }
 
