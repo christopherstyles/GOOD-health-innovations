@@ -56,7 +56,7 @@ source: https://gist.github.com/adamstac/5048881
 
 Values: none, antialiased (default), subpixel-antialiased
 
-Currently compatibile only in webkit browsers
+Currently only compatibile in webkit browsers
 */
 @mixin font-smoothing($value: antialiased) {
   -webkit-font-smoothing: $value;
@@ -83,4 +83,15 @@ Compatibility untested.
     height: image-height(sprite-file($map-retina, $sprite)) / 2;
     width: image-width(sprite-file($map-retina, $sprite)) / 2;
   }
+}
+
+/*
+Apply block formatting context.
+
+See: http://www.w3.org/TR/CSS2/visuren.html#block-formatting
+*/
+@mixin block-formatting-context {
+  overflow:hidden;
+  *overflow:visible;
+  zoom:1;
 }
