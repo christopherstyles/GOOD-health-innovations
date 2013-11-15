@@ -1,0 +1,13 @@
+/*
+Arrows
+*/
+
+// Non-retina
+$arrows-layout: vertical;
+$arrows-spacing: 2px;
+$arrows: sprite-map('arrows/*.png');
+
+// Retina
+$arrows-retina-layout: vertical;
+$arrows-retina-spacing: 2px;
+$arrows-retina: sprite-map('arrows-retina/*.png');
