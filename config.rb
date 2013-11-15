@@ -76,8 +76,6 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  activate :favicon_maker
-
   set :debug_assets, true
 
   # Or use a different image path
