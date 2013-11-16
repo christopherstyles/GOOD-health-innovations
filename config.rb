@@ -50,6 +50,7 @@ Slim::Engine.set_default_options pretty: true
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'images'
+set :fonts_dir, 'fonts'
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -66,12 +67,12 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
 
-  set :debug_assets, true
+  # set :debug_assets, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
