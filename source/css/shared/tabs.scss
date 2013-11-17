@@ -1,3 +1,5 @@
+@import 'globals/mixins';
+@import 'shared/sprites';
 @import 'compass/typography/text/replacement';
 
 /*
@@ -11,44 +13,40 @@ No Styleguide reference.
 
     a {
       @include hide-text;
-      background: image-url('sprites/tabs.png') no-repeat 0px 0px;
-      background: rgba(0,0,0,0) image-url('sprites/tabs.svg') no-repeat 0px 0px;
       display: inline-block;
-      width: 39px;
-      height: 55px;
       margin-right: 24px;
       margin-bottom: -5px;
     }
 
     &.tab-one {
       a {
-        background-position: 0 0;
+        @include retina-sprite($tabs, $tabs-retina, tab-one);
 
         &:hover,
         &.active {
-          background-position: 0 -55px;
+          @include retina-sprite($tabs, $tabs-retina, tab-one-active);
         }
       }
     }
 
     &.tab-two {
       a {
-        background-position: 0 -220px;
+        @include retina-sprite($tabs, $tabs-retina, tab-two);
 
         &:hover,
         &.active {
-          background-position: 0 -275px;
+          @include retina-sprite($tabs, $tabs-retina, tab-two-active);
         }
       }
     }
 
     &.tab-three {
       a {
-        background-position: 0 -110px;
+        @include retina-sprite($tabs, $tabs-retina, tab-three);
 
         &:hover,
         &.active {
-          background-position: 0 -165px;
+          @include retina-sprite($tabs, $tabs-retina, tab-three-active);
         }
       }
     }

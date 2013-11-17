@@ -37,3 +37,15 @@ $buttons-retina-layout: vertical;
 $buttons-retina-spacing: 2px;
 $buttons-retina: sprite-map('buttons-retina/*.png');
 
+/*
+Tabs
+*/
+// Non-retina
+$tabs-layout: vertical;
+$tabs-spacing: 2px;
+$tabs: sprite-map('tabs/*.png');
+
+// Retina
+$tabs-retina-layout: vertical;
+$tabs-retina-spacing: 2px;
+$tabs-retina: sprite-map('tabs-retina/*.png');
