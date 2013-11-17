@@ -10,6 +10,7 @@ header {
   margin:0 auto;
   width:1000px;
 }
+
 h1.title {
   @include hide-text;
   @include at2x('title', 766px, 152px);

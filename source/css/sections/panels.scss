@@ -31,8 +31,8 @@ No Styleguide reference.
   }
 
   /*
-  A foreground overlay that obscures the illustrated panels. This element
-  is initially hidden.
+  A foreground overlay that obscures the illustrated panels. This element is
+  initially hidden, but is given an .active class when the popup is triggered.
 
   .active - Reveals the foreground overlay.
 
@@ -113,6 +113,29 @@ No Styleguide reference.
     &:hover {
       .title {
         top: 0px;
+      }
+    }
+  }
+
+  &.panel-where-do-you-stand {
+    position: relative;
+
+    a {
+      .rollover {
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:hover {
+        > img {
+          visibility: hidden;
+        }
+
+        .rollover {
+          visibility: visible;
+        }
       }
     }
   }
