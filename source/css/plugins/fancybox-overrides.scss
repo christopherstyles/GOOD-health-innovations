@@ -43,13 +43,13 @@
 }
 
 .fancybox-close {
-  background: image-url('btn/close.svg') no-repeat 0px 0px;
-  background: rgba(0,0,0,0) image-url('btn/close.svg') no-repeat 0px 0px;
-  background-size: 40px 40px;
-  width: 40px;
-  height: 40px;
+  @include retina-sprite($buttons, $buttons-retina, close);
   top: -43px;
   right: -43px;
+
+  &:hover {
+    @include retina-sprite($buttons, $buttons-retina, close-active);
+  }
 }
 
 #fancybox-loading div {

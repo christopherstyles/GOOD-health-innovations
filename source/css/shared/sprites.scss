@@ -23,3 +23,17 @@ $arrows: sprite-map('arrows/*.png');
 $arrows-retina-layout: vertical;
 $arrows-retina-spacing: 2px;
 $arrows-retina: sprite-map('arrows-retina/*.png');
+
+/*
+Buttons
+*/
+// Non-retina
+$buttons-layout: vertical;
+$buttons-spacing: 2px;
+$buttons: sprite-map('buttons/*.png');
+
+// Retina
+$buttons-retina-layout: vertical;
+$buttons-retina-spacing: 2px;
+$buttons-retina: sprite-map('buttons-retina/*.png');
+
