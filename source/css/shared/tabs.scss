@@ -20,33 +20,33 @@ No Styleguide reference.
 
     &.tab-one {
       a {
-        @include retina-sprite($tabs, $tabs-retina, tab-one);
+        @include retina-sprite($buttons, $buttons-retina, tab-one);
 
         &:hover,
         &.active {
-          @include retina-sprite($tabs, $tabs-retina, tab-one-active);
+          @include retina-sprite($buttons, $buttons-retina, tab-one-active);
         }
       }
     }
 
     &.tab-two {
       a {
-        @include retina-sprite($tabs, $tabs-retina, tab-two);
+        @include retina-sprite($buttons, $buttons-retina, tab-two);
 
         &:hover,
         &.active {
-          @include retina-sprite($tabs, $tabs-retina, tab-two-active);
+          @include retina-sprite($buttons, $buttons-retina, tab-two-active);
         }
       }
     }
 
     &.tab-three {
       a {
-        @include retina-sprite($tabs, $tabs-retina, tab-three);
+        @include retina-sprite($buttons, $buttons-retina, tab-three);
 
         &:hover,
         &.active {
-          @include retina-sprite($tabs, $tabs-retina, tab-three-active);
+          @include retina-sprite($buttons, $buttons-retina, tab-three-active);
         }
       }
     }

@@ -12,20 +12,20 @@
   }
 
   &.fancybox-next {
-    @include retina-sprite($arrows, $arrows-retina, arrow-right);
+    @include retina-sprite($buttons, $buttons-retina, arrow-right);
     right: -72px;
 
     &:hover {
-      @include retina-sprite($arrows, $arrows-retina, arrow-right-active);
+      @include retina-sprite($buttons, $buttons-retina, arrow-right-active);
     }
   }
 
   &.fancybox-prev {
-    @include retina-sprite($arrows, $arrows-retina, arrow-left);
+    @include retina-sprite($buttons, $buttons-retina, arrow-left);
     left: -72px;
 
     &:hover {
-      @include retina-sprite($arrows, $arrows-retina, arrow-left-active);
+      @include retina-sprite($buttons, $buttons-retina, arrow-left-active);
     }
   }
 }
