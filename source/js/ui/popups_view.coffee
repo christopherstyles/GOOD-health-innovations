@@ -14,6 +14,7 @@ class PopupsView
     height: 650
     width: 750
     padding: 0
+    margin: [55, 20, 20, 20]
     scrolling: 'no'
     beforeShow: ->
       $('section.panels .overlay').addClass 'active'
